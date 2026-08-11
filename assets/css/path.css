@@ -1,0 +1,104 @@
+:root {
+  --path-done: #22c55e;
+  --path-current: #f59e0b;
+  --path-current-deep: #d97706;
+  --path-locked: #3a4252;
+  --path-locked-icon: #6b7280;
+  --path-line: #3a4252;
+  --path-line-active: #f59e0b;
+}
+
+.hex {
+  width: 4.25rem;
+  height: 4.25rem;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.hex:hover {
+  transform: scale(1.06);
+}
+
+.hex:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.hex--done {
+  background: linear-gradient(160deg, #4ade80, var(--path-done));
+  color: #052e16;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--path-done) 35%, transparent);
+}
+
+.hex--current {
+  background: linear-gradient(160deg, #fbbf24, var(--path-current-deep));
+  color: #422006;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--path-current) 40%, transparent);
+}
+
+.hex--upcoming {
+  background: linear-gradient(160deg, #4b5563, var(--path-locked));
+  color: var(--path-locked-icon);
+}
+
+.hex__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.path-rail {
+  position: absolute;
+  left: 50%;
+  top: 2.1rem;
+  bottom: 2.1rem;
+  width: 0;
+  border-left: 3px dashed var(--path-line);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.path-rail__fill {
+  position: absolute;
+  left: -3px;
+  top: 0;
+  width: 3px;
+  background: var(--path-line-active);
+  border-radius: 999px;
+}
+
+.path-pop {
+  position: absolute;
+  z-index: 5;
+  min-width: 12rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.85rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.45);
+}
+
+.path-pop__btn {
+  display: block;
+  width: 100%;
+  margin-top: 0.65rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: white;
+  background: var(--accent);
+  border-radius: 0.55rem;
+  padding: 0.55rem 0.75rem;
+}
+
+.path-pop__btn:hover {
+  background: var(--accent-hover);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "education",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "prepare": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.15.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "monaco-editor": "^0.53.0",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3"
+  }
+}

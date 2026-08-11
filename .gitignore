@@ -1,1 +1,8 @@
 ﻿.cursor/
+node_modules/
+.nuxt/
+.output/
+.data/
+dist/
+*.log
+.DS_Store
